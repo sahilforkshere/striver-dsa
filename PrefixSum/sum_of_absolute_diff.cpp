@@ -16,9 +16,11 @@ vector <int>  getAbsSumDiff(vector<int> &a){
 
     for (int i = 0; i < n; i++)
     {
+        int leftSum= prefixSum[i]-a[i];
+        int rightSum=prefixSum[n-1]-prefixSum[i];
            res[i] =
-                ((a[i] * i - (prefixSum[i] - a[i])) +
-                 ((prefixSum[n - 1] - prefixSum[i]) - (a[i] * (n - i - 1))));
+                (a[i] * i - leftSum ) +
+                 (rightSum -a[i] * (n - i - 1));
     }
     return res;
     
