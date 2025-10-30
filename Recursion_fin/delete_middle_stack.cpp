@@ -10,7 +10,7 @@ void solve(stack<int> &s, int k)
     int temp = s.top();
     s.pop();
     solve(s, k - 1);
-    s.push(temp);
+    s.push(temp); 
 }
 stack<int> deleteMiddle(stack<int> &s, int size)
 {
