@@ -1,0 +1,40 @@
+Here's a recursion tree for the `letterCasePermutation` function using the input `s = "a1b"` as an example.
+
+The function is `helper(ind, ds, s, res)`.
+
+  * `h(...)` is the function call.
+  * The first number is the `ind`.
+  * The string is the `ds` (the permutation being built).
+  * Arrows show the recursive calls.
+  * **Green boxes** are the final base cases that add to the `res` list.
+
+<!-- end list -->
+
+```
+                            h(0, "", "a1b")
+                                   |
+                      +-------------------+
+                      | (c='a', isalpha)  |
+                      |                   |
+        +---------------+               +---------------+
+    (pick 'a')      |               | (pick 'A')
+                    v               v
+            h(1, "a", "a1b")        h(1, "A", "a1b")
+                    |               |
+                    | (c='1', digit)|               | (c='1', digit)
+                    | (one choice)  |               | (one choice)
+                    v               v
+            h(2, "a1", "a1b")       h(2, "A1", "a1b")
+                    |               |
+        +-----------+-----------+   +-----------+-----------+
+        | (c='b', isalpha)      |   | (c='b', isalpha)      |
+        |                       |   |                       |
+    +---+ (pick 'b')    (pick 'B')+-+   +---+ (pick 'b')    (pick 'B')+-+
+    v                           v   v                           v
+h(3, "a1b", "a1b")          h(3, "a1B", "a1b")      h(3, "A1b", "a1b")          h(3, "A1B", "a1b")
+    | (base case)               | (base case)           | (base case)               | (base case)
+    | ind == 3                  | ind == 3              | ind == 3                  | ind == 3
+    |                           |                       |                           |
+    v                           v                       v                           v
+  res.push("a1b")           res.push("a1B")         res.push("A1b")           res.push("A1B")
+```
