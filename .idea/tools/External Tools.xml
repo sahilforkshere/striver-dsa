@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="compile_current_file " showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="C:\Program Files\Git\bin\bash.exe" />
+      <option name="PARAMETERS" value="-c &quot;g++ -std=c++17 -O2 \&quot;$FilePath$\&quot; -o \&quot;$ProjectFileDir$/run_temp.exe\&quot;&quot; " />
+      <option name="WORKING_DIRECTORY" value="$ProjectFileDir$ " />
+    </exec>
+  </tool>
+</toolSet>

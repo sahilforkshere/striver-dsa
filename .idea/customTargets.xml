@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CLionExternalBuildManager">
+    <target id="d71493dd-2510-4776-9aa5-209523608a08" name="compile_current_file" defaultType="TOOL">
+      <configuration id="c72b5c9f-4b42-493a-928c-ff2aafebd8fd" name="compile_current_file">
+        <build type="TOOL">
+          <tool actionId="Tool_External Tools_compile_current_file " />
+        </build>
+      </configuration>
+    </target>
+  </component>
+</project>
