@@ -92,4 +92,6 @@ add_executable(striver_dsa
         stack/implementation/stakc_using_LL.cpp
         queue/implement/queue_using_linked_list.cpp
         queue/implement/queue_using_stack.cpp
+        stack/monotonic_stack/NGE.cpp
+        stack/monotonic_stack/nge_2.cpp
 )
