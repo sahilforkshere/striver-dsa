@@ -89,4 +89,7 @@ add_executable(striver_dsa
         stack/implementation/stack_using_arr.cpp
         strings/no_of_substrings.cpp
         strings/space_check.cpp
+        stack/implementation/stakc_using_LL.cpp
+        queue/implement/queue_using_linked_list.cpp
+        queue/implement/queue_using_stack.cpp
 )
