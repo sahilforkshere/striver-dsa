@@ -92,6 +92,17 @@ add_executable(striver_dsa
         stack/implementation/stakc_using_LL.cpp
         queue/implement/queue_using_linked_list.cpp
         queue/implement/queue_using_stack.cpp
-        stack/monotonic_stack/NGE.cpp
-        stack/monotonic_stack/nge_2.cpp
+        stack/monotonic_stack/imp_nge_pge/NGE.cpp
+        stack/monotonic_stack/trapping_rain_water_prefixMax.cpp
+        stack/monotonic_stack/optimized_trappin_rainwater.cpp
+        stack/monotonic_stack/imp_nge_pge/pse.cpp
+        stack/monotonic_stack/imp_nge_pge/nse.cpp
+        stack/monotonic_stack/imp_problems/histogram.cpp
+        stack/monotonic_stack/imp_nge_pge/pge.cpp
+        stack/monotonic_stack/imp_problems/histogram_optmized.cpp
+        stack/monotonic_stack/imp_problems/maximum_rectangle.cpp
+        stack/monotonic_stack/imp_problems/celebrity_problem.cpp
+        stack/monotonic_stack/imp_problems/celebrity_optimized.cpp
+        trees/traversals/it_preorder.cpp
+        trees/create_tree.h
 )
