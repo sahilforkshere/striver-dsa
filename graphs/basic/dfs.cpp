@@ -8,7 +8,7 @@ void dfs( Graph &g, int start,vector<int> &vis){
 
     for(auto it :g.adj[start]){
         if(vis[it]==0){
-            dfs(g,it,vis    );
+            dfs(g,it,vis );
         }
         
     }
