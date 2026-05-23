@@ -2,25 +2,29 @@
 // Time Complexity: O(V + E)
 // Space Complexity: O(V + E)
 // Note: This implementation assumes that the graph is a Directed Acyclic Graph (DAG). If the graph contains a cycle, the topological sort is not possible.
-  
+
   
   #include<bits/stdc++.h>
     using namespace std;
-    void topobfs( int start, vector<vector<int>> &adj, vector<int> &vis){
+    vector<int> topobfs( int start, vector<vector<int>> &adj, vector<int> &vis){
+        vector<int> topo;
         int n= adj.size();
         queue<int> q;
+        // Step :-1 Calculate in-degrees 
         vector<int> indegree(n,0);
         for(int i=0;i<n;i++){
             for( int x : adj[i]){
                 indegree[x]++;
             }
         }
+        // Step :-2 Push all nodes with in-degree 0 into the queue
         for (int i = 0; i <n; i++)
         {
             if(indegree[i]==0){
                 q.push(i);
             }
         }
+        // Step :-3 Process the queue
 
         while (!q.empty())
         {
@@ -29,11 +33,15 @@
 
             for(int x : adj[curr]){
                 indegree[x]--;
+                // If in-degree becomes 0, add it to the queue
                 if(indegree[x]==0){
+                    // Step :-4 Add the node to the topological order
+                    topo.push_back(x);
                     q.push(x);
                 }
             }
         }
+        return topo;
         
         
     }
